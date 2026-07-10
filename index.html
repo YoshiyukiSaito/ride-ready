@@ -1,12 +1,38 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
-</head>
-<body>
-  <h1>Hello, world!</h1>
-  <p>GitHub Pages で表示される最小ページです。</p>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="位置情報をもとに今日の雨・晴れを表示するページ" />
+    <title>今日の天気</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="card">
+        <p class="eyebrow">Your location</p>
+        <h1>今日の天気</h1>
+        <p id="status" class="status">位置情報を取得しています…</p>
+        <p class="note">現在地の近くの天気を確認します。</p>
+        <div id="result" class="result">読み込み中…</div>
+        <div class="details">
+          <div>
+            <span>場所</span>
+            <strong id="location">—</strong>
+          </div>
+          <div>
+            <span>気温</span>
+            <strong id="temperature">—</strong>
+          </div>
+          <div>
+            <span>降水確率</span>
+            <strong id="precipitation">—</strong>
+          </div>
+        </div>
+        <button id="retry" type="button">もう一度確認</button>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
 </html>
