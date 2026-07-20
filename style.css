@@ -58,6 +58,35 @@ h1 {
   font-size: 0.95rem;
 }
 
+.tabs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.35rem;
+  padding: 0.3rem;
+  margin-bottom: 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+}
+
+.tab {
+  border: none;
+  border-radius: 10px;
+  padding: 0.65rem 0.8rem;
+  background: transparent;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.tab:hover {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.tab.is-active {
+  background: var(--accent);
+  color: white;
+}
+
 .result {
   min-height: 96px;
   display: flex;

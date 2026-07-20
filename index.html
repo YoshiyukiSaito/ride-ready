@@ -14,19 +14,43 @@
         <h1>今日の天気</h1>
         <p id="status" class="status">位置情報を取得しています…</p>
         <p class="note">現在地の近くの天気を確認します。</p>
-        <div id="result" class="result">読み込み中…</div>
-        <div class="details">
-          <div>
-            <span>場所</span>
-            <strong id="location">—</strong>
-          </div>
-          <div>
-            <span>気温</span>
-            <strong id="temperature">—</strong>
-          </div>
-          <div>
-            <span>降水確率</span>
-            <strong id="precipitation">—</strong>
+        <div class="tabs" role="tablist" aria-label="表示する日付">
+          <button
+            id="today-tab"
+            class="tab is-active"
+            type="button"
+            role="tab"
+            aria-selected="true"
+            aria-controls="weather-panel"
+          >
+            今日
+          </button>
+          <button
+            id="tomorrow-tab"
+            class="tab"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-controls="weather-panel"
+          >
+            明日
+          </button>
+        </div>
+        <div id="weather-panel" role="tabpanel" aria-labelledby="today-tab">
+          <div id="result" class="result">読み込み中…</div>
+          <div class="details">
+            <div>
+              <span>場所</span>
+              <strong id="location">—</strong>
+            </div>
+            <div>
+              <span>気温</span>
+              <strong id="temperature">—</strong>
+            </div>
+            <div>
+              <span>降水確率</span>
+              <strong id="precipitation">—</strong>
+            </div>
           </div>
         </div>
         <button id="retry" type="button">もう一度確認</button>
